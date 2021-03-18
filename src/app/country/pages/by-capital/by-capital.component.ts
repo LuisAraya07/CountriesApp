@@ -13,6 +13,8 @@ export class ByCapitalComponent{
   term: string = '';
   isError: boolean = false;
   countries: Country[] = [];
+  suggestionsCountries: Country[] = [];
+  showSuggestions: boolean = false;
   constructor( private countryService: CountryService ) { }
 
 
@@ -33,6 +35,16 @@ export class ByCapitalComponent{
 
   suggestions( term: string){
     this.isError = false;
+    this.term = term;
+    this.showSuggestions = true;
+    this.countryService.searchCapital( term )
+      .subscribe(countries => {
+        this.suggestionsCountries = countries.splice(0, 5);
+      })
+  }
+
+  searchSuggestion( term: string ){
+    this.search( term );
   }
 
 }

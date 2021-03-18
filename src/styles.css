@@ -6,3 +6,11 @@
 .mr-1{
     margin-right: 3px;
 }
+
+/*
+  Color del Loading
+*/
+svg path,
+svg rect{
+  fill: red;
+}

@@ -11,7 +11,14 @@
         > </app-country-input>
     </div>
 </div>
-
+<!-- Sugerencias -->
+<app-suggestions
+    (onSearchSuggestion) = "searchSuggestion( $event )"
+    [showSuggestions] = "showSuggestions"
+    [suggestionsCountries] = "suggestionsCountries"
+    [term] = "term"
+    [isCountry] = false
+    ></app-suggestions>
 
 <hr>
 

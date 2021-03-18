@@ -11,11 +11,12 @@ import { SeeCountryComponent } from './pages/see-country/see-country.component';
 import { RouterModule } from '@angular/router';
 import { CountryTableComponent } from './components/country-table/country-table.component';
 import { CountryInputComponent } from './components/country-input/country-input.component';
+import { SuggestionsComponent } from './components/suggestions/suggestions.component';
 
 
 
 @NgModule({
-  declarations: [ByCapitalComponent, ByCountryComponent, ByRegionComponent, SeeCountryComponent, CountryTableComponent, CountryInputComponent],
+  declarations: [ByCapitalComponent, ByCountryComponent, ByRegionComponent, SeeCountryComponent, CountryTableComponent, CountryInputComponent, SuggestionsComponent],
   exports: [ByCapitalComponent, ByCountryComponent, ByRegionComponent, SeeCountryComponent],
   imports: [
     CommonModule,

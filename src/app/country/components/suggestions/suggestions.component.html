@@ -1,0 +1,20 @@
+<ul  *ngIf= "showSuggestions"
+     class="list-group">
+    <li *ngFor = "let country of suggestionsCountries"
+        class="list-group-item list-group-item-action">
+        <a  class="nav-link" 
+            [routerLink]="['/country', country.alpha2Code]">
+            {{ (isCountry) ? country.name : country.capital }}
+        </a>
+    </li>
+
+    <li 
+        class="list-group-item list-group-item-action"
+        (click) = "searchSuggestion( term )"
+        >
+        <a  class="nav-link" 
+            >
+            Search "{{ term }}"
+        </a>
+    </li>
+</ul>
